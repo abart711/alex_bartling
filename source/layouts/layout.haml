@@ -7,8 +7,7 @@
     %meta{name: 'author', content: ''}
 
     = render :haml, 'layouts/shim'
-
-    %link{href: '/stylesheets/style.css', type: 'text/css', rel: 'stylesheet'}
+    = stylesheet_link_tag 'style'
 
   %body
     %nav{class: 'navbar navbar-default navbar-fixed-top', role: 'navigation'}
