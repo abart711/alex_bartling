@@ -13,17 +13,25 @@
     %nav{class: 'navbar navbar-default navbar-fixed-top', role: 'navigation'}
       .container
         .navbar-header
+          %button{class: 'navbar-toggle', data: { toggle: 'collapse', target: '.navbar-collapse' }}
+            %span{ class: 'icon-bar'}
+            %span{ class: 'icon-bar'}
+            %span{ class: 'icon-bar'}
         .navbar-collapse.collapse
           %ul{class: 'nav navbar-nav navbar-right'}
-            %li
+            %li 
               = link_to 'About', '#'
-            %li
+            %li 
               = link_to 'Resume', '#'
+            %li
+              = link_to 'Contact', '#'
+            %li
+              = link_to 'Blog', '#'
 
     .container 
       = yield
 
-
-    = javascript_include_tag 'all'
     = javascript_include_tag 'http://code.jquery.com/jquery.js'
+    = javascript_include_tag 'all'
+    
   
