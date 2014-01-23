@@ -44,6 +44,13 @@
 #     "Helping"
 #   end
 # end
+set :markdown_engine, :redcarpet 
+set :markdown, :fenced_code_blocks => true , 
+  :smartypants => true , 
+  :automaticallyink => true 
+activate :syntax 
+
+activate :directory_indexes
 
 set :css_dir, 'stylesheets'
 
@@ -67,4 +74,10 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.sources = 'blog/:year-:month-:day-:title.html'
+  blog.layout = "blog_layout"
 end
